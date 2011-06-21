@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/mkhan/work/elance/mkhansqs/lib/aws-java-sdk-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/mkhan/work/elance/mkhansqs/lib/commons-logging-1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/mkhan/work/elance/mkhansqs/lib/httpcomponents-client-4.1.1/httpclient-4.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/mkhan/work/elance/mkhansqs/lib/httpcomponents-client-4.1.1/httpcore-4.1.jar"/>
+	<classpathentry kind="lib" path="/home/mkhan/work/elance/mkhansqs/lib/commons-codec-1.3/commons-codec-1.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

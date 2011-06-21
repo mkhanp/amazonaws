@@ -1,0 +1,50 @@
+ec2-67-202-17-14.compute-1.amazonaws.com 
+
+-------------------
+simple db structure
+-------------------
+
+sqs_mkhan_util
+	-> meta
+		-> worker_count : 2
+		-> worker_run: 0/1
+		-> queue_name
+
+sqs_mkhan_output
+	->processingtime
+		-> msgid : processingtime
+
+-----
+files 
+-----
+
+1) aws: cmd line utility which talks to aws. 
+2) mkhan_sqs_util: utility which uses aws exe to set multiple configuration paramerter and generate test load 
+3)SQSWorker: worker process which process messages in queue
+
+
+----
+cmds
+----
+
+./mkhan_sqs_util.pl meta mkhan_sqs_util wc 2
+
+./mkhan_sqs_util.pl meta mkhan_sqs_util qname mkhan_test_queue 
+
+./mkhan_sqs_util.pl meta mkhan_sqs_util qname mkhan_test_queue tmsg 2
+
+
+./mkhan_sqs_util.pl meta mkhan_sqs_util wstart
+
+./mkhan_sqs_util.pl meta mkhan_sqs_util wstop
+
+
+----
+logs
+----
+
+tail -f /tmp/sqs.1.log 
+
+./aws select 'select * from mkhan_sqs_output' -1
+
+
